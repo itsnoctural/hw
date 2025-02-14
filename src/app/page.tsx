@@ -81,20 +81,26 @@ export default async function Home() {
         </div>
 
         <div className="flex flex-col gap-y-4 border-2 border-border px-6 py-4 rounded-lg w-full bg-background/80">
-          <div className="flex gap-x-1.5 items-center text-muted-foreground">
-            <Gamepad size={16} />
-            <Link href={"/games"}>games.db</Link>
-          </div>
+          <Link href={"/games"} className="flex justify-between items-center text-muted-foreground">
+            <div className="flex gap-x-1.5 items-center">
+              <Gamepad size={16} />
+              <span>games.db</span>
+            </div>
+            <span className="text-xs text-muted-foreground/20 float-right">click to see more</span>
+          </Link>
 
           <GameCard {...games[0]} />
           <GameCard {...games[1]} />
 
           <hr />
 
-          <div className="flex gap-x-1.5 items-center text-muted-foreground">
-            <ListMusic size={16} />
-            <Link href={"/music"}>music.db</Link>
-          </div>
+          <Link href={"/music"} className="flex justify-between items-center text-muted-foreground">
+            <div className="flex gap-x-1.5 items-center">
+              <ListMusic size={16} />
+              <span>music.db</span>
+            </div>
+            <span className="text-xs text-muted-foreground/20 float-right">click to see more</span>
+          </Link>
 
           <MusicCard {...music[0]} />
           <MusicCard {...music[1]} />
@@ -110,7 +116,7 @@ export default async function Home() {
 
           <div className="grid grid-cols-2 gap-4">
             {skills.map((skill) => (
-              <div className="flex flex-col bg-accent/35 px-5 py-4 rounded-md gap-y-4 hover:scale-102 transition-transform hover:shadow-xl hover:opacity-90" key={skill.id}>
+              <div className="flex flex-col bg-accent/45 px-5 py-4 rounded-md gap-y-4 hover:scale-103 transition-transform hover:shadow-xl hover:opacity-90" key={skill.id}>
                 <div className="flex items-center gap-x-3">
                   <skill.icon />
                   <span className="text-lg">{skill.name}</span>
