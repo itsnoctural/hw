@@ -67,7 +67,7 @@ export default async function Home() {
           </div>
 
           <div className="flex gap-x-3">
-            {track ? <Image className="rounded-lg" height={64} width={64} src={track.item.album.images[1].url} alt="album" /> : <div className="bg-accent size-16 rounded-lg" />}
+            {track ? <Image className="rounded-lg" height={64} width={64} src={track.item.album.images[1].url} unoptimized alt="album" /> : <div className="bg-accent size-16 rounded-lg" />}
             <div className="flex flex-col justify-between">
               <div className="flex flex-col">
                 <span>{track ? track.item.name : "Nothing's playing right now"}</span>

@@ -4,7 +4,7 @@ import Image from "next/image";
 export function GameCard({ id, name, description, tags }: IGame) {
     return (
         <div className="flex gap-x-3">
-            <Image className="rounded-md" src={`/games/${id}.webp`} height={84} width={72} alt={id} />
+            <Image className="rounded-md" src={`/games/${id}.webp`} height={84} width={72} alt={id} unoptimized />
             <div className="flex flex-col justify-between">
                 <div className="flex flex-col">
                     <span>{name}</span>
