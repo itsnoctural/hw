@@ -34,7 +34,7 @@ export default async function Home() {
   const weather = await res.json();
 
   return (
-    <main className="flex max-w-screen-xl mx-auto w-full gap-x-4">
+    <main className="flex flex-col md:flex-row max-w-screen-xl mx-auto w-full gap-4 items-center">
       <div className="flex flex-col gap-y-4 w-4/5">
         <div className="flex gap-x-6">
           <div className="flex flex-col gap-y-1 border-2 border-border px-6 py-4 rounded-lg w-full bg-background/80">
