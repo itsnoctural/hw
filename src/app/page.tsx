@@ -39,7 +39,7 @@ export default async function Home() {
 
   return (
     <main className="flex flex-col md:flex-row max-w-screen-xl mx-auto w-full gap-4 items-center">
-      <div className="flex flex-col gap-y-4 w-4/5">
+      <div className="flex flex-col gap-y-4 w-full lg:w-4/5">
         <div className="flex gap-x-6">
           <div className="flex flex-col gap-y-1 border-2 border-border px-6 py-4 rounded-lg w-full bg-background/80">
             <div className="flex gap-x-1.5 items-center text-muted-foreground">
@@ -123,7 +123,7 @@ export default async function Home() {
               <div className="flex flex-col bg-accent/45 px-5 py-4 rounded-md gap-y-4 hover:scale-103 transition-transform hover:shadow-xl hover:opacity-90" key={skill.id}>
                 <div className="flex items-center gap-x-3">
                   <skill.icon />
-                  <span className="text-lg">{skill.name}</span>
+                  <span className="text-base lg:text-lg">{skill.name}</span>
                 </div>
 
                 <div className="flex items-center gap-x-2 rounded-sm">
