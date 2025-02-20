@@ -30,7 +30,11 @@ export default async function Home() {
     track = null;
   }
 
-  const res = await fetch(`https://api.weatherxu.com/v1/weather?api_key=${process.env.WEATHER_API}&lat=49.2331&lon=28.4682&parts=currently&units=imperial`);
+  const res = await fetch(`https://api.weatherxu.com/v1/weather?api_key=${process.env.WEATHER_API}&lat=49.2331&lon=28.4682&parts=currently&units=imperial`, {
+    next: {
+      revalidate: 300,
+    }
+  });
   const weather = await res.json();
 
   return (
