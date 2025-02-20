@@ -1,4 +1,5 @@
 import { Footer } from "@/components/footer";
+import { Snowflakes } from "@/components/snowflakes";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Analytics } from "@vercel/analytics/react";
 import { GeistSans } from 'geist/font/sans';
@@ -31,8 +32,8 @@ export default function RootLayout({
           />
           {children}
           <Footer />
-
           <Analytics />
+          <Snowflakes />
         </ThemeProvider>
       </body>
     </html>
