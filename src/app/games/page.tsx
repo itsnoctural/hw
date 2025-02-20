@@ -1,6 +1,7 @@
 import { GameCard } from "@/components/card/game";
 import { games } from "@/lib/games";
 import { Gamepad } from "lucide-react";
+import { Fragment } from "react";
 
 export default async function Games() {
     return (
@@ -11,10 +12,10 @@ export default async function Games() {
                     <span>games.db | Favorite games</span>
                 </div>
                 {games.map((game, i) => (
-                    <>
-                        <GameCard {...game} key={game.id} />
+                    <Fragment key={game.id}>
+                        <GameCard {...game} />
                         {i < games.length - 1 && <hr />}
-                    </>
+                    </Fragment>
                 ))}
             </div>
         </main>

@@ -2,6 +2,7 @@ import { MusicCard } from "@/components/card/music";
 import { games } from "@/lib/games";
 import { music } from "@/lib/music";
 import { ListMusic } from "lucide-react";
+import { Fragment } from "react";
 
 export default async function Games() {
     return (
@@ -12,10 +13,10 @@ export default async function Games() {
                     <span>music.db | Favorite tracks</span>
                 </div>
                 {music.map((music, i) => (
-                    <>
-                        <MusicCard {...music} key={music.id} />
+                    <Fragment key={music.id}>
+                        <MusicCard {...music} />
                         {i < games.length - 1 && <hr />}
-                    </>
+                    </Fragment>
                 ))}
             </div>
         </main>
