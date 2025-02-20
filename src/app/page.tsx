@@ -130,7 +130,7 @@ export default async function Home() {
                   <svg height="12" width="12" xmlns="http://www.w3.org/2000/svg">
                     <circle r="3" cx="7" cy="7" className={skill.learning ? "fill-cyan-300" : "fill-green-500"}></circle>
                   </svg>
-                  <span className={`font-light ${skill.learning ? "text-cyan-300" : "text-green-500"}`}>{skill.learning ? "In progress" : "In active use"}</span>
+                  <span className={`text-xs lg:text-base font-light ${skill.learning ? "text-cyan-300" : "text-green-500"}`}>{skill.learning ? "In progress" : "In active use"}</span>
                 </div>
               </div>
             ))}
