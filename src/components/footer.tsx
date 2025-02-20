@@ -3,17 +3,23 @@
 import { Moon, Sun } from "lucide-react"
 import { useTheme } from "next-themes"
 import Link from "next/link"
-import { FaDiscord } from "react-icons/fa"
+import { FaDiscord, FaGithub } from "react-icons/fa"
 import { Button } from "./ui/button"
 
 export function Footer() {
     const { theme, setTheme } = useTheme()
 
     return (
-        <footer className="flex max-w-screen-xl mx-auto mt-2 justify-between">
-            <span className="text-muted-foreground/50">Built with love by itsnoctural on high-performance framework</span>
+        <footer className="flex max-w-screen-xl mx-auto mt-2 justify-between gap-x-2">
+            <span className="text-muted-foreground/50">Built with love by itsnoctural on high-performance framework Next.js</span>
 
             <div className="flex gap-x-1.5">
+                <Button variant="outline" size="icon" asChild>
+                    <Link href={"https://github.com/itsnoctural/hw"}>
+                        <FaGithub />
+                    </Link>
+                </Button>
+
                 <Button variant="outline" size="icon" asChild>
                     <Link href={"https://discord.gg/CPJz5Byp"}>
                         <FaDiscord />
